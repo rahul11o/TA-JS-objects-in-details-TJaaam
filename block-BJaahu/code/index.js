@@ -36,22 +36,53 @@
 // ```
 
 //- Prototypal pattern of object creation (Put methods inside an object and create object using Object.create)
-let questionMet = {
-    isAnswerCorrect: function (index) {
-      return index === this.correctAnswerIndex;
-    },
-    getCorrectAnswer: function () {
-      return this.options[this.correctAnswerIndex];
-    },
-  };
+
+// let questionMet = {
+//     isAnswerCorrect: function (index) {
+//       return index === this.correctAnswerIndex;
+//     },
+//     getCorrectAnswer: function () {
+//       return this.options[this.correctAnswerIndex];
+//     },
+//   };
   
-  function createQuestion(title, options, correctAnswerIndex) {
-    let quesData = Object.create(questionMet);
-    quesData.title = title;
-    quesData.options = options;
-    quesData.correctAnswerIndex = correctAnswerIndex;
+//   function createQuestion(title, options, correctAnswerIndex) {
+//     let quesData = Object.create(questionMet);
+//     quesData.title = title;
+//     quesData.options = options;
+//     quesData.correctAnswerIndex = correctAnswerIndex;
   
-    return quesData;
-  }
+//     return quesData;
+//   }
   
   //Pseudoclassical Pattern (Put methods inside F.prototype and use `new` to call function)
+
+//   function CreateQuestion(title, options, correctAnswerIndex) {
+//     this.title = title;
+//     this.options = options;
+//     this.correctAnswerIndex = correctAnswerIndex;
+//   }
+
+//   CreateQuestion.prototype = {
+//     isAnswerCorrect: function (index) {
+//       return index === this.correctAnswerIndex;
+//     },
+//     getCorrectAnswer: function () {
+//       return this.options[this.correctAnswerIndex];
+//     },
+//   };
+
+//- Create using class
+
+class CreateQuestion {
+    constructor(title, options, correctAnswerIndex){
+        this.title = title;
+        this.options = options;
+        this.correctAnswerIndex = correctAnswerIndex;
+    }
+    isAnswerCorrect(index) {
+      return index === this.correctAnswerIndex;}
+    getCorrectAnswer() {
+      return this.options[this.correctAnswerIndex];
+    }
+ }
