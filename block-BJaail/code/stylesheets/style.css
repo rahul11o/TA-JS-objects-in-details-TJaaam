@@ -137,6 +137,10 @@ table {
 *::after {
   box-sizing: border-box;
 }
+.container {
+  width: 1300px;
+  margin: 0 auto;
+}
 
 header {
   text-align: center;
@@ -156,20 +160,13 @@ h1 {
   font-size: 36px;
   font-weight: lighter;
 }
-.bookDetails {
-  width: 80%;
+.form {
+  width: 50%;
   margin: 0 auto;
 }
-
-.bookDetails input,
+.form input,
 button {
   width: 100%;
-  padding: 4px;
-  margin: 8px 0;
-  display: inline-block;
-}
-
-.bookDetails button {
-  background-color: #5e8fbb;
-  color: white;
+  padding: 6px;
+  margin: 12px 0;
 }
